@@ -54,6 +54,14 @@ export class CalculatorPage implements OnInit {
     this.navController.navigateForward(['/home']);
   }
 
+  site() {
+
+  }
+
+  portfolio() {
+
+  }
+
   updateValue(ev){
     console.log(ev.target.value.toString().toFixed(2));
   }

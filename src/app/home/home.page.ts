@@ -40,4 +40,12 @@ export class HomePage {
     this.navController.navigateForward(['/calculator']);
   }
 
+  site() {
+
+  }
+
+  portfolio() {
+
+  }
+
 }
