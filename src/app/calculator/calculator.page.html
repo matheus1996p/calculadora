@@ -78,7 +78,7 @@
         </ion-card-header>
 
         <ion-card-content style="font-size: 14px; font-weight: bold; color: #1e2023" align="center">
-          {{calculo.resultado | currency:'BRL'}} Sacos
+          <span *ngIf="calculo.resultado">{{calculo.resultado | number : '1.2-2'}} <span *ngIf="isClickSaco">SACO</span> <span *ngIf="isClickBag">BAG</span></span>
         </ion-card-content>
       </ion-card>
 

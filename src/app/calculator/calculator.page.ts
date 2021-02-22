@@ -36,6 +36,7 @@ export class CalculatorPage implements OnInit {
   }
 
   onClick(tipoEmb){
+    this.calculo.resultado = undefined;
     this.calculo.tipoEmb = tipoEmb;
     if(tipoEmb === 'bag'){
       this.isClickBag = true;
@@ -55,7 +56,7 @@ export class CalculatorPage implements OnInit {
   }
 
   site() {
-
+    window.open("http://www.sementescampea.com.br/",'_system', 'location=yes');
   }
 
   portfolio() {
