@@ -28,9 +28,9 @@ export class CalculatorPage implements OnInit {
 
   salvar() {
     if (this.calculo.tipoEmb === 'bag'){
-      this.calculo.resultado = ((parseFloat(this.formDrawee.controls.pop.value) / (parseInt(this.formDrawee.controls.germinacao.value) * 10000000)) * parseFloat(this.formDrawee.controls.ha.value)) * 5000000;
-    } else {
       this.calculo.resultado = ((parseFloat(this.formDrawee.controls.pop.value) / (parseInt(this.formDrawee.controls.germinacao.value) * 10000000)) * parseFloat(this.formDrawee.controls.ha.value)) * 200000;
+    } else {
+      this.calculo.resultado = ((parseFloat(this.formDrawee.controls.pop.value) / (parseInt(this.formDrawee.controls.germinacao.value) * 10000000)) * parseFloat(this.formDrawee.controls.ha.value)) * 5000000;
     }
 
   }
@@ -53,6 +53,10 @@ export class CalculatorPage implements OnInit {
 
   calculadora() {
     this.navController.navigateForward(['/home']);
+  }
+
+  whatsapp() {
+    window.open('whatsapp://send?phone=5546999051483', '_system');
   }
 
   site() {

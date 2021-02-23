@@ -28,7 +28,7 @@ export class HomePage {
   }
 
   whatsapp() {
-    window.open('whatsapp://send?phone=554688266644', '_system');
+    window.open('whatsapp://send?phone=5546999051483', '_system');
   }
 
   openCustom() {
@@ -41,7 +41,7 @@ export class HomePage {
   }
 
   site() {
-
+    window.open("http://www.sementescampea.com.br/",'_system', 'location=yes');
   }
 
   portfolio() {

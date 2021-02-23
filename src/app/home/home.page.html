@@ -11,53 +11,100 @@
 
 <ion-content>
   <div align="center" style="margin-top: 15%">
-    <img style="width: 200px; height: 100px;" src="/assets/nova-logo.png">
+    <img style="max-width: 230px; max-height: 130px; width: auto; height: auto" src="/assets/nova-logo.png">
   </div>
+
+  <ion-tabs style="margin-top: 2%;">
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="site()" tab="site">
+        <ion-icon class="medium" name="globe-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="call()" tab="call">
+        <ion-icon class="medium" name="call-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button  (click)="calculadora()">
+        <ion-icon class="larger"  name="calculator"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="whatsapp()" tab="whatsapp">
+        <ion-icon class="medium" name="logo-whatsapp"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="portfolio()" tab="portfolio">
+        <ion-icon class="medium" name="menu-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
 
-
-<!--<ion-toolbar>-->
+<!--<ion-toolbar style="border:solid 1px;-->
+<!--    box-shadow: 5px 5px 5px 10px black;" color="light">-->
 <!--  <ion-buttons slot="start">-->
 <!--    <ion-button (click)="site()">-->
-<!--      <ion-icon name="globe-outline"></ion-icon>-->
+<!--      <ion-icon class="medium" name="globe-outline"></ion-icon>-->
 <!--    </ion-button>-->
-<!--    <ion-button (click)="telefone()">-->
-<!--      <ion-icon name="call-outline"></ion-icon>-->
+<!--    <ion-button style="margin-left: 20px" (click)="call()">-->
+<!--      <ion-icon class="medium" name="call-outline"></ion-icon>-->
 <!--    </ion-button>-->
-<!--    <ion-button (click)="calculadora()">-->
-<!--      <ion-icon name="calculator-outline"></ion-icon>-->
+<!--  </ion-buttons>-->
+<!--  <ion-buttons  style="margin: auto;-->
+<!--  width: 50%;">-->
+<!--    <ion-button  (click)="calculadora()">-->
+<!--      <ion-icon class="larger" name="calculator-outline"></ion-icon>-->
 <!--    </ion-button>-->
-<!--    <ion-button (click)="whatsapp()">-->
-<!--      <ion-icon name="logo-whatsapp"></ion-icon>-->
+<!--  </ion-buttons>-->
+<!--  <ion-buttons slot="end">-->
+<!--    <ion-button style="margin-right: 20px" href="https://wa.me/5546999051483">-->
+<!--      <ion-icon class="medium" name="logo-whatsapp"></ion-icon>-->
 <!--    </ion-button>-->
 <!--    <ion-button (click)="portfolio()">-->
-<!--      <ion-icon name="menu-outline"></ion-icon>-->
+<!--      <ion-icon class="medium" name="menu-outline"></ion-icon>-->
 <!--    </ion-button>-->
 <!--  </ion-buttons>-->
 <!--</ion-toolbar>-->
 
-<ion-toolbar style="border:solid 1px;
-    box-shadow: 5px 5px 5px 10px black;" color="light">
-  <ion-buttons slot="start">
-    <ion-button (click)="site()">
-      <ion-icon class="medium" name="globe-outline"></ion-icon>
-    </ion-button>
-    <ion-button style="margin-left: 20px" (click)="call()">
-      <ion-icon class="medium" name="call-outline"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons  style="margin: auto;
-  width: 50%;">
-    <ion-button  (click)="calculadora()">
-      <ion-icon class="larger" name="calculator-outline"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons slot="end">
-    <ion-button style="margin-right: 20px" href="https://wa.me/5546999051483">
-      <ion-icon class="medium" name="logo-whatsapp"></ion-icon>
-    </ion-button>
-    <ion-button (click)="portfolio()">
-      <ion-icon class="medium" name="menu-outline"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-</ion-toolbar>
+
+<!--<ion-toolbar style="border:solid 1px;-->
+<!--    box-shadow: 5px 5px 5px 10px black;" color="light">-->
+<!--  <ion-buttons slot="primary">-->
+<!--    <ion-button (click)="site()">-->
+<!--      <ion-icon class="medium" name="globe-outline"></ion-icon>-->
+<!--    </ion-button>-->
+<!--    <ion-button  (click)="call()">-->
+<!--      <ion-icon class="medium" name="call-outline"></ion-icon>-->
+<!--    </ion-button>-->
+<!--  </ion-buttons>-->
+
+<!--  <ion-buttons slot="secondary">-->
+<!--    <ion-button  (click)="calculadora()">-->
+<!--      <ion-icon class="larger" name="calculator-outline"></ion-icon>-->
+<!--    </ion-button>-->
+<!--  </ion-buttons>-->
+
+<!--  <ion-buttons slot="end">-->
+<!--    <ion-button href="https://wa.me/5546999051483">-->
+<!--      <ion-icon class="medium" name="logo-whatsapp"></ion-icon>-->
+<!--    </ion-button>-->
+<!--    <ion-button (click)="portfolio()">-->
+<!--      <ion-icon class="medium" name="menu-outline"></ion-icon>-->
+<!--    </ion-button>-->
+<!--  </ion-buttons>-->
+
+
+<!--  <ion-tabs>-->
+<!--    <ion-tab  tabTitle="Home" tabIcon="home"></ion-tab>-->
+<!--    <ion-tab  tabTitle="About" tabIcon="information-circle"></ion-tab>-->
+<!--    <ion-tab  tabTitle="Contact" tabIcon="contacts"></ion-tab>-->
+<!--    <ion-tab  tabTitle="Add" tabIcon="person-add"></ion-tab>-->
+<!--    <ion-tab  tabTitle="Edit" tabIcon="create"></ion-tab>-->
+<!--  </ion-tabs>-->
+
+
+
+
+<!--</ion-toolbar>-->
+
+
+
