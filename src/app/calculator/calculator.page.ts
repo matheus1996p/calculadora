@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavController} from '@ionic/angular';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.page.html',
   styleUrls: ['./calculator.page.scss'],
 })
+
 export class CalculatorPage implements OnInit {
 
   formDrawee: FormGroup;
@@ -19,7 +21,8 @@ export class CalculatorPage implements OnInit {
 
   constructor(
       private navController: NavController,
-      public formBuilder: FormBuilder
+      public formBuilder: FormBuilder,
+      private fileOpener: FileOpener
   ) { }
 
   ngOnInit() {
@@ -56,7 +59,7 @@ export class CalculatorPage implements OnInit {
   }
 
   whatsapp() {
-    window.open('whatsapp://send?phone=5546999051483', '_system');
+    window.open('whatsapp://send?phone=5562999274912', '_system');
   }
 
   site() {
@@ -64,7 +67,7 @@ export class CalculatorPage implements OnInit {
   }
 
   portfolio() {
-
+    window.open(encodeURI('https://drive.google.com/file/d/1c-qtrESEOnQD56wEeM10Sd7B7bIf8Jax/view?usp=sharing'), '_blank', 'location=yes,EnableViewPortScale=yes');
   }
 
   updateValue(ev){
@@ -78,5 +81,4 @@ export class CalculatorPage implements OnInit {
       germinacao: new FormControl('', Validators.compose([Validators.required]))
     });
   }
-
 }

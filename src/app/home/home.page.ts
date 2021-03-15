@@ -28,7 +28,7 @@ export class HomePage {
   }
 
   whatsapp() {
-    window.open('whatsapp://send?phone=5546999051483', '_system');
+    window.open('whatsapp://send?phone=5562999274912', '_system');
   }
 
   openCustom() {
@@ -45,7 +45,7 @@ export class HomePage {
   }
 
   portfolio() {
-
+    window.open(encodeURI('https://drive.google.com/file/d/1c-qtrESEOnQD56wEeM10Sd7B7bIf8Jax/view?usp=sharing'), '_blank', 'location=yes,EnableViewPortScale=yes');
   }
 
 }

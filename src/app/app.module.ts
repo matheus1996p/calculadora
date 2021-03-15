@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxMaskIonicModule} from 'ngx-mask-ionic';
 import {registerLocaleData} from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
+
+
 registerLocaleData(ptBr)
 
 @NgModule({
@@ -21,6 +24,7 @@ registerLocaleData(ptBr)
   providers: [
     StatusBar,
     SplashScreen,
+    FileOpener,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
       provide: LOCALE_ID,      useValue: 'pt-PT'
