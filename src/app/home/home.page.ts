@@ -12,7 +12,7 @@ export class HomePage {
   constructor(private menu: MenuController,
               private navController: NavController) {}
 
-  phoneNumber = '4699051483';
+  phoneNumber = '62999274912';
 
   openFirst(){
     this.menu.enable(true, 'first');

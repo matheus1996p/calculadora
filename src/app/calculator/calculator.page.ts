@@ -12,7 +12,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 export class CalculatorPage implements OnInit {
 
   formDrawee: FormGroup;
-  phoneNumber = '4699051483';
+  phoneNumber = '62999274912';
 
   isClickBag = true;
   isClickSaco = false;
