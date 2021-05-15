@@ -12,7 +12,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 export class CalculatorPage implements OnInit {
 
   formDrawee: FormGroup;
-  phoneNumber = '62999274912';
+  phoneNumber = '5562999274912';
 
   isClickBag = true;
   isClickSaco = false;
@@ -31,9 +31,27 @@ export class CalculatorPage implements OnInit {
 
   salvar() {
     if (this.calculo.tipoEmb === 'bag'){
-      this.calculo.resultado = ((parseFloat(this.formDrawee.controls.pop.value) / (parseInt(this.formDrawee.controls.germinacao.value) * 10000000)) * parseFloat(this.formDrawee.controls.ha.value)) * 200000;
+      var pop = this.formDrawee.controls.pop.value.replace(".", "");
+      pop = pop.replace(",", ".");
+      var germinacao = this.formDrawee.controls.germinacao.value.replace(".", "");
+      germinacao = germinacao.replace(",", ".");
+      var ha = this.formDrawee.controls.ha.value.replace(".", "");
+      ha = ha.replace(",", ".");
+
+      var qtdeBag = 5000000 / ((10000 / pop) * germinacao);
+
+      this.calculo.resultado = ha / qtdeBag;
     } else {
-      this.calculo.resultado = ((parseFloat(this.formDrawee.controls.pop.value) / (parseInt(this.formDrawee.controls.germinacao.value) * 10000000)) * parseFloat(this.formDrawee.controls.ha.value)) * 5000000;
+      var pop = this.formDrawee.controls.pop.value.replace(".", "");
+      pop = pop.replace(",", ".");
+      var germinacao = this.formDrawee.controls.germinacao.value.replace(".", "");
+      germinacao = germinacao.replace(",", ".");
+      var ha = this.formDrawee.controls.ha.value.replace(".", "");
+      ha = ha.replace(",", ".");
+
+      var qtdeBag = 5000000 / ((10000 / pop) * germinacao);
+
+      this.calculo.resultado = (ha / qtdeBag) * 25;
     }
 
   }

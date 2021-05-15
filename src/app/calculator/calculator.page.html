@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="formDrawee" (ngSubmit)="salvar()">
+  <form [formGroup]="formDrawee" (ngSubmit)="salvar()" style="margin-bottom: 2%">
     <ion-grid>
       <ion-item >
         <ion-label color="danger" style="font-weight: bold" position="floating">Tamanho Área (HA)</ion-label>
@@ -22,19 +22,19 @@
         </ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="danger" style="font-weight: bold" position="floating">População Recomendada</ion-label>
+        <ion-label color="danger" style="font-weight: bold" position="floating">Espaçamento (cm)</ion-label>
         <ion-input [ngModel]="calculo.pop" formControlName="pop"
                    type="tel" inputmode="number"
-                   [brmasker]="{numberAndTousand: true, thousand: '.'}"
-                   placeholder="0" clearInput clearOnEdit="false">
+                   [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: '2'}"
+                   placeholder="00,00" clearInput clearOnEdit="false">
         </ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="danger" style="font-weight: bold" position="floating">Germinação (%)</ion-label>
+        <ion-label color="danger" style="font-weight: bold" position="floating">Semente por metro</ion-label>
         <ion-input [ngModel]="calculo.germinacao" formControlName="germinacao"
                    type="tel" inputmode="number"
-                   [brmasker]="{percent: true}"
-                   placeholder="0%" clearInput clearOnEdit="false">
+                   [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: '2'}"
+                   placeholder="00,00" clearInput clearOnEdit="false">
         </ion-input>
       </ion-item>
 
@@ -44,19 +44,19 @@
         <ion-row>
           <ion-col  class="ion-align-self-start">
             <ion-button  expand="full" *ngIf="isClickBag" color="secondary" size="small" (click)="onClick('bag')">
-              Bag 5MM
+              Emb. 5MM
             </ion-button>
             <ion-button expand="full" *ngIf="!isClickBag" color="tertiary" size="small" (click)="onClick('bag')">
-              Bag 5MM
+              Emb. 5MM
             </ion-button>
           </ion-col>
 
           <ion-col class="ion-align-self-end">
             <ion-button expand="full" *ngIf="isClickSaco"  color="secondary" size="small"  (click)="onClick('saco')">
-              Saco 200.000 kg
+              Saco 200.000 Sementes
             </ion-button>
             <ion-button expand="full" *ngIf="!isClickSaco"  color="tertiary" size="small"  (click)="onClick('saco')">
-              Saco 200.000 kg
+              Saco 200.000 Sementes
             </ion-button>
           </ion-col>
         </ion-row>
@@ -76,32 +76,32 @@
       <ion-card>
         <ion-card-header align="center">
           <ion-card-title class="fontStyle" *ngIf="isClickSaco && calculo.resultado" style="font-size: 12px">Quantidade de Sacos Necessários</ion-card-title>
-          <ion-card-title class="fontStyle" *ngIf="isClickBag && calculo.resultado" style="font-size: 12px">Quantidade de BAG Necessários</ion-card-title>
+          <ion-card-title class="fontStyle" *ngIf="isClickBag && calculo.resultado" style="font-size: 12px">Quantidade de Embalagens Necessárias</ion-card-title>
         </ion-card-header>
 
         <ion-card-content style="font-size: 14px; font-weight: bold; color: #1e2023" align="center">
-          <span *ngIf="calculo.resultado">{{calculo.resultado | number : '1.2-2'}} <span *ngIf="isClickSaco">SACO</span> <span *ngIf="isClickBag">BAG</span></span>
+          <span *ngIf="calculo.resultado">{{calculo.resultado | number : '1.2-2'}} <span *ngIf="isClickSaco">Sementes</span> <span *ngIf="isClickBag">Embalagem</span></span>
         </ion-card-content>
       </ion-card>
 
-<!--      <ion-row>-->
-<!--        <ion-col  size="6">-->
-<!--          <ion-card (click)="portfolio()">-->
-<!--            <ion-card-content style="background-color: #ffd015; font-size: 11px; font-weight: bold; color: #1e2023" align="center">-->
-<!--              Acesse nosso portfólio de produtos-->
-<!--            </ion-card-content>-->
-<!--          </ion-card>-->
-<!--        </ion-col>-->
-<!--        <ion-col size="6">-->
-<!--          <ion-card (click)="whatsapp()">-->
-<!--            <ion-card-content style="background-color: #ffd015; font-size: 11px; font-weight: bold; color: #1e2023" align="center">-->
-<!--              Fale agora com-->
-<!--              <br>-->
-<!--              nossa equipe-->
-<!--            </ion-card-content>-->
-<!--          </ion-card>-->
-<!--        </ion-col>-->
-<!--      </ion-row>-->
+      <ion-row>
+        <ion-col  size="6">
+          <ion-card (click)="portfolio()">
+            <ion-card-content style="background-color: #ffd015; font-size: 11px; font-weight: bold; color: #1e2023" align="center">
+              Acesse nosso portfólio de produtos
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card (click)="whatsapp()">
+            <ion-card-content style="background-color: #ffd015; font-size: 11px; font-weight: bold; color: #1e2023" align="center">
+              Fale agora com
+              <br>
+              nossa equipe
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
     </ion-grid>
   </form>
